@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Un título</title>
+  <!--Acá vamos a meter más metadatos, con la ayuda de https://megatags.co/-->
+  <link href="normalize.css" rel="stylesheet">
+  <style>
+    /* por el punto al principio del selector, esta es una regla para una clase de nombre container */
+      .container{padding:1em 2em; margin:0;}
+
+    /* acá defino una regla que se aplica a los elementos header, section, footer */
+      header, section, footer{padding:5px;}
+
+    /* acá defino una relga que se aplica solo al elemento footer, que se agrega a lo definido en la regla anterior */
+      footer{margin-top:2em; border-top:1px solid #ddd; font-size:90%;}
+
+    /* acá defino una regla que se aplica al título de tercer nivel cuando está dentro de section */
+        section h3{margin-top:3em;}
+
+    /* acá defino una regla que se aplica a la imagen cuando está dentro de section */
+      section img{max-width: 100%;}
+
+    /* acá defino una regla que se aplica a la table cuando está dentro de section */
+      section table{border-collapse: collapse; margin-bottom: 1.5em;}
+
+    /* acá defino una regla que se aplica a la thead dentro de la table cuando está dentro de section */
+      section table thead{background:#eee;}
+
+    /* ¿y qué pasa en este caso? */
+      section table td, section table th{
+      	border:1px solid #ccc;
+        padding:10px;
+        margin:0;
+        text-align: left;
+        font-size:90%;
+      }
+
+    /*
+      Cuando pedían permiso de niños,
+      iban su papá y él decía que NO,
+      luego iban con su mamá y ella les decía que SI,
+      entonces SI lo hacían.
+      De la misma forma se comporta CSS,
+      se queda con lo último que le dicen.
+      Eso lo aprovecho acá
+    */
+
+      section table td:first-child, section table th:first-child{
+        text-align: center;
+      }
+
+      section table td:last-child, section table th:last-child{
+        padding-right:40px;
+      }
+
+    </style>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Hola mundo!</h1>
+      <h2>Diseño y Nuevos Medios<br>
+      Segunda clase</h2>
+    </header>
+    <section>
+      <h3>Este es un título de tercer nivel</h3>
+      <p>En <a href="http://lipsum.com/" target="_blank">lipsum.com</a> podemos obtener la cantidad de caracteres que queramos para un párrafo,
+        varios párrafos, listados, etc. En este caso le pedí 500 bytes: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vestibulum ullamcorper odio at magna ornare, nec elementum enim feugiat. Suspendisse potenti. Suspendisse cursus neque a
+        magna congue pulvinar. Nulla interdum urna eget mauris laoreet rutrum. Proin eu lorem vel tellus mattis dapibus.
+        Proin lacinia orci sit amet iaculis vehicula. Aliquam sit amet euismod risus, sodales scelerisque diam. Nullam urna purus,
+        dictum sed ultricies eu, luctus quis est. Vestibulum arcu nibh, fringilla non posuere.</p>
+      <figure>
+        <img src="http://lorempixel.com/800/400/city/" alt="imagen random de 800 x 600">
+        <figcaption>También existe un "Loren Ipsum de imágenes", se llama <a href="http://lorempixel.com/" target="_blank">lorempixel.com</a></figcaption>
+      </figure>
+
+      <h3>Podemos agregar otro título de tercer nivel</h3>
+      <p>Ahora escribo un párrafo para anunciar que se viene una <em>lista desordenada:</em></p>
+      <ul>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Nunc non mi vel arcu feugiat ullamcorper.</li>
+          <li>Curabitur in quam eu velit blandit interdum.</li>
+      </ul>
+      <p>Y si quiero una <em>lista ordenada</em>, queda así:</p>
+      <ol>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Nunc non mi vel arcu feugiat ullamcorper.</li>
+          <li>Curabitur in quam eu velit blandit interdum.</li>
+      </ol>
+
+<h3>Podemos agregar otro título de tercer nivel más</h3>
+
+<!--Comienza la tabla-->
+<table>
+  <thead>
+  <tr>
+  <th>Nro.</th>
+  <th>Apellidos</th>
+  <th>Nombres</th>
+  <th>Dirección del sitio hospedado en Github pages</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>DE LA HOZ ARMIJO</td>
+      <td>JORDANNA DOMINICKE</td>
+      <td><a href="https://jordanna212.github.io/hello-world/">https://jordanna212.github.io/hello-world/</a></td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>GARCES DIAZ</td>
+      <td>BASTIAN MAURICIO</td>
+      <td><a href="https://bastgarces.github.io/DNO037/">https://bastgarces.github.io/DNO037/</a></td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>MORALES AVILA</td>
+      <td>CONSTANZA BELEN</td>
+      <td><a href="https://coniconon.github.io/Clase-1-DNO037/">https://coniconon.github.io/Clase-1-DNO037/</a></td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>PINTO RAMOS</td>
+      <td>PAULA CAMILA</td>
+      <td><a href="https://paupintor5569.github.io/Pagina-de-prueba/">https://paupintor5569.github.io/Pagina-de-prueba/</a></td>
+    </tr>
+  </tbody>
+</table>
+<!--Termina la tabla-->
+
+<p>En la tabla tenemos que reconocer algunos elementos, que debo definir con "spanglish":</p>
+
+<!--en lo que sigue uso algunas description list (DL), que deben contener un description term (DT) y una description description (DD)-->
+
+  <dl>
+    <dt>table</dt>
+    <dd>La <strong>table</strong> misma</dd>
+  </dl>
+
+  <dl>
+    <dt>thead</dt>
+    <dd>Dentro de la <strong>t</strong>able misma, puedo definir una <strong>head</strong></dd>
+  </dl>
+
+  <dl>
+    <dt>tbody</dt>
+    <dd>Dentro de la <strong>t</strong>able misma, también puedo definir un <strong>body</strong></dd>
+  </dl>
+
+  <dl>
+    <dt>tr</dt>
+    <dd>cada <strong>t</strong>able <strong>r</strong>ow of cells</dd>
+  </dl>
+
+  <dl>
+    <dt>td</dt>
+    <dd>cada <strong>t</strong>able <strong>d</strong>ata cell</dd>
+  </dl>
+
+  <dl>
+    <dt>th</dt>
+    <dd>cada <strong>T</strong>able Data cell que tiene rol de <strong>H</strong>eader</dd>
+  </dl>
+
+  <h3>Y, por ahora, este es el último subtítulo de tercer nivel</h3>
+  <p>Existen varios elementos HTML, pero son limitados. Cada elemento puede anidar otros elementos. Además, los elementos puede tener <span style="color:#f00">atributos particulares</span></p>
+
+</section>
+<footer>
+<p><a href="mailto:tucorreo@uc.cl">Nombre Apellido</a> | 15 de marzo, 2017</p>
+</footer>
+</div>
+
+</body>
+</html>
